@@ -87,7 +87,7 @@ body {
     background-image: url('./img/meme4.jpg');
 }
 .slide5 {
-    background-image: url('./img/meme5.jpg');
+    background-image: url('./img/meme1.jpg');
 }
 
 #slide1:checked ~ .slider > .slide1,
@@ -171,4 +171,33 @@ body {
     display: grid;
     grid-template-columns: 3fr 1fr;
     margin-top: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        margin-top: 30px;
+    }
+
+    .slider {
+        height: 65vh;
+    }
+
+    .slider-text {
+        width: 100%;
+        grid-area: bot-content;
+        margin-top: 2rem;
+    }
+
+    .wrapper .controls {
+        grid-area: top-content;
+        margin: 0 auto;
+    }
+
+
+    .footer-content {
+        grid-template-areas:
+                "top-content"
+                "bot-content";
+        grid-template-columns: none;
+    }
 }
